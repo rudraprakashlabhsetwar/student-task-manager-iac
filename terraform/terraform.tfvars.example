@@ -1,0 +1,26 @@
+# Example Terraform Configuration Variables
+# -------------------------------------------------------------
+# Instructions:
+# 1. Copy this file to `terraform.tfvars`:
+#    cp terraform.tfvars.example terraform.tfvars
+# 2. Replace the placeholder values below with your credentials.
+# 3. Note: Never commit `terraform.tfvars` or API tokens to Git!
+# -------------------------------------------------------------
+
+# Cloudflare API Token (Requires: Workers Scripts:Edit, Workers KV:Edit)
+cloudflare_api_token = "your_cloudflare_api_token_here"
+
+# Cloudflare Account ID (Found in Cloudflare Dashboard -> Workers & Pages)
+account_id = "your_cloudflare_account_id_here"
+
+# Name of the Cloudflare Worker application
+worker_name = "student-task-manager"
+
+# Title of the Workers KV Namespace for storing task records
+kv_namespace_name = "student_tasks"
+
+# Target deployment environment
+environment = "production"
+
+# Your Cloudflare Workers Subdomain (*.workers.dev)
+workers_subdomain = "your-subdomain"

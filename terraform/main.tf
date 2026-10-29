@@ -13,4 +13,9 @@ resource "cloudflare_workers_script" "task_manager" {
     name         = "TASKS_KV"
     namespace_id = cloudflare_workers_kv_namespace.student_tasks.id
   }
+
+  plain_text_binding {
+    name = "ENVIRONMENT"
+    text = var.environment
+  }
 }
