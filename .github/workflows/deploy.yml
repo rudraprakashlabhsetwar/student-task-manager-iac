@@ -1,4 +1,4 @@
-name: Terraform Deploy
+name: Terraform CI/CD Pipeline
 
 on:
   push:
@@ -8,25 +8,44 @@ on:
 
 jobs:
   terraform:
+    name: "Terraform Lint, Validate, Plan & Deploy"
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: terraform
+    env:
+      TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TF_VAR_account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
 
     steps:
-      - name: Checkout code
+      # Step 1: Check out the repository source code
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
+      # Step 2: Set up Terraform CLI
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: 1.7.5
 
+      # Step 3: Check Terraform formatting (STEP 13)
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      # Step 4: Initialize Terraform working directory (STEP 12)
       - name: Terraform Init
         run: terraform init -backend=false
 
-      - name: Terraform Format
-        run: terraform fmt -check
-
+      # Step 5: Validate configuration syntax and integrity (STEP 14)
       - name: Terraform Validate
         run: terraform validate
+
+      # Step 6: Generate Execution Plan (STEP 15)
+      - name: Terraform Plan
+        if: env.TF_VAR_cloudflare_api_token != '' && env.TF_VAR_account_id != ''
+        run: terraform plan -no-color
+
+      # Step 7: Automated Deployment on Main branch push (STEP 16 & STEP 26)
+      - name: Terraform Apply
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push' && env.TF_VAR_cloudflare_api_token != '' && env.TF_VAR_account_id != ''
+        run: terraform apply -auto-approve -no-color

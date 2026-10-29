@@ -1,7 +1,18 @@
-﻿.terraform/
+# Terraform local files & state
+.terraform/
 *.tfstate
 *.tfstate.*
 *.tfplan
 crash.log
+crash.*.log
+
+# Variables & Secrets (NEVER COMMIT SENSITIVE VALUES)
 terraform.tfvars
+*.auto.tfvars
 .env
+.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
