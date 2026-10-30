@@ -11,7 +11,7 @@
 ---
 
 ## 🌐 Live Application
-- **Production URL:** [https://student-task-manager.sudhanshulanjewar195.workers.dev](https://student-task-manager.sudhanshulanjewar195.workers.dev)
+- **Production URL:** [https://student-task-manager.rudralabshetwar.workers.dev](https://student-task-manager.rudralabshetwar.workers.dev)
 - **Edge Runtime:** Cloudflare V8 Serverless Isolates
 - **Storage Backend:** Cloudflare Workers KV (Global Low-Latency Key-Value Store)
 
@@ -215,7 +215,7 @@ All endpoints accept and return JSON.
 
 ### 1. Create a Task
 ```bash
-curl -X POST "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks" \
+curl -X POST "https://student-task-manager.rudralabshetwar.workers.dev/api/tasks" \
   -H "Content-Type: application/json" \
   -d '{
     "title": "Complete Cloud Computing Assignment",
@@ -240,24 +240,24 @@ curl -X POST "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/
 
 ### 2. Get All Tasks
 ```bash
-curl "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks"
+curl "https://student-task-manager.rudralabshetwar.workers.dev/api/tasks"
 ```
 
 ### 3. Get Task by ID
 ```bash
-curl "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821"
+curl "https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821"
 ```
 
 ### 4. Update Task Status
 ```bash
-curl -X PUT "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821" \
+curl -X PUT "https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821" \
   -H "Content-Type: application/json" \
   -d '{"status": "Completed"}'
 ```
 
 ### 5. Delete Task
 ```bash
-curl -X DELETE "https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821"
+curl -X DELETE "https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821"
 ```
 
 ---

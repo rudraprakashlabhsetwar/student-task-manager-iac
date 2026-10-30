@@ -30,5 +30,5 @@ variable "environment" {
 variable "workers_subdomain" {
   description = "Cloudflare workers.dev account subdomain"
   type        = string
-  default     = "sudhanshulanjewar195"
+  default     = "rudralabshetwar"
 }

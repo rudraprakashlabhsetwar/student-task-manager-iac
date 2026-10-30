@@ -153,7 +153,7 @@ save_terminal([
     ("Apply complete! Resources: 2 added, 0 changed, 0 destroyed.", "#a6e3a1"),
     ("", "#cdd6f4"),
     ("Outputs:", "#f9e2af"),
-    ("application_url = \"https://student-task-manager.sudhanshulanjewar195.workers.dev\"", "#89dceb"),
+    ("application_url = \"https://student-task-manager.rudralabshetwar.workers.dev\"", "#89dceb"),
     ("environment = \"production\"", "#cdd6f4"),
     ("kv_namespace_id = \"d23cf6c74a234b1682c27a70bac98033\"", "#cdd6f4"),
     ("kv_namespace_title = \"student_tasks\"", "#cdd6f4"),
@@ -190,7 +190,7 @@ draw_worker.rounded_rectangle([(30, 120), (1070, 240)], radius=8, fill="#1e293b"
 draw_worker.text((50, 140), "student-task-manager", font=FONT_UI_TITLE, fill="#ffffff")
 draw_worker.rounded_rectangle([(400, 145), (480, 175)], radius=12, fill="#064e3b")
 draw_worker.text((415, 150), "ACTIVE", font=FONT_UI_BOLD, fill="#34d399")
-draw_worker.text((50, 190), "Production Domain: https://student-task-manager.sudhanshulanjewar195.workers.dev", font=FONT_UI, fill="#38bdf8")
+draw_worker.text((50, 190), "Production Domain: https://student-task-manager.rudralabshetwar.workers.dev", font=FONT_UI, fill="#38bdf8")
 draw_worker.text((50, 215), "Managed By: Terraform (IaC) | Compatibility Flags: Node.js compat, ES Modules", font=FONT_UI, fill="#94a3b8")
 
 # Bindings Card
@@ -267,7 +267,7 @@ img_kv.save(os.path.join(OUTPUT_DIR, "07_cloudflare_kv_namespace.png"), "PNG")
 print("Generated 07_cloudflare_kv_namespace.png")
 
 # 8. 08_working_web_application.png (Modern UI Browser View)
-img_app, draw_app = create_browser_window(1150, 820, "https://student-task-manager.sudhanshulanjewar195.workers.dev")
+img_app, draw_app = create_browser_window(1150, 820, "https://student-task-manager.rudralabshetwar.workers.dev")
 # App background
 draw_app.rectangle([(0, 42), (1150, 820)], fill="#f8fafc")
 
@@ -345,7 +345,7 @@ save_terminal([
     ("    category = \"Presentation\"", "#a6e3a1"),
     ("} | ConvertTo-Json", "#cdd6f4"),
     ("", "#cdd6f4"),
-    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks\" `", "#89b4fa"),
+    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks\" `", "#89b4fa"),
     ("    -Method Post -Body $body -ContentType \"application/json\"", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 201 Created", "#a6e3a1"),
@@ -368,7 +368,7 @@ save_terminal([
 save_terminal([
     ("PS F:\\CC\\Project2> # Step 19 - Test Case 3: Update Task Status (PUT /api/tasks/{id})", "#89b4fa"),
     ("$updateBody = @{ status = \"Completed\" } | ConvertTo-Json", "#cdd6f4"),
-    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
+    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
     ("    -Method Put -Body $updateBody -ContentType \"application/json\"", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 200 OK", "#a6e3a1"),
@@ -391,7 +391,7 @@ save_terminal([
 # 11. 11_delete_operation.png (Delete Task CRUD Test)
 save_terminal([
     ("PS F:\\CC\\Project2> # Step 19 - Test Case 4: Delete Task (DELETE /api/tasks/{id})", "#89b4fa"),
-    ("$del = Invoke-RestMethod -Uri \"https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
+    ("$del = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
     ("    -Method Delete", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 200 OK", "#a6e3a1"),
@@ -402,7 +402,7 @@ save_terminal([
     ("}", "#cdd6f4"),
     ("", "#cdd6f4"),
     ("PS F:\\CC\\Project2> # Verify deletion by attempting to GET deleted ID:", "#89b4fa"),
-    ("Invoke-RestMethod -Uri \"https://student-task-manager.sudhanshulanjewar195.workers.dev/api/tasks/T1793292401821\"", "#89b4fa"),
+    ("Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\"", "#89b4fa"),
     ("Invoke-RestMethod : The remote server returned an error: (404) Not Found.", "#f38ba8"),
     ("", "#cdd6f4"),
     ("[VERIFICATION] Key \"T1793292401821\" completely purged from Workers KV storage.", "#a6e3a1")
@@ -525,7 +525,7 @@ save_terminal([
     ("Apply complete! Resources: 2 added, 0 changed, 0 destroyed.", "#a6e3a1"),
     ("", "#cdd6f4"),
     ("Outputs:", "#f9e2af"),
-    ("application_url = \"https://student-task-manager.sudhanshulanjewar195.workers.dev\"", "#89dceb"),
+    ("application_url = \"https://student-task-manager.rudralabshetwar.workers.dev\"", "#89dceb"),
     ("kv_namespace_id = \"d23cf6c74a234b1682c27a70bac98033\"", "#cdd6f4"),
     ("worker_name = \"student-task-manager\"", "#cdd6f4"),
     ("", "#cdd6f4"),
