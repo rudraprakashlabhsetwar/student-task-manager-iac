@@ -120,14 +120,14 @@ save_terminal([
     ("", "#cdd6f4"),
     ("  # cloudflare_workers_kv_namespace.student_tasks will be created", "#a6e3a1"),
     ("  + resource \"cloudflare_workers_kv_namespace\" \"student_tasks\" {", "#a6e3a1"),
-    ("      + account_id = \"eb7f89182eebe0e3bc53c8fc8709b28e\"", "#cdd6f4"),
+    ("      + account_id = \"f4984c3282a5a5d31d6bbcee2d638939\"", "#cdd6f4"),
     ("      + id         = (known after apply)", "#cdd6f4"),
     ("      + title      = \"student_tasks\"", "#cdd6f4"),
     ("    }", "#a6e3a1"),
     ("", "#cdd6f4"),
     ("  # cloudflare_workers_script.task_manager will be created", "#a6e3a1"),
     ("  + resource \"cloudflare_workers_script\" \"task_manager\" {", "#a6e3a1"),
-    ("      + account_id = \"eb7f89182eebe0e3bc53c8fc8709b28e\"", "#cdd6f4"),
+    ("      + account_id = \"f4984c3282a5a5d31d6bbcee2d638939\"", "#cdd6f4"),
     ("      + content    = (content from application/worker.js)", "#cdd6f4"),
     ("      + id         = (known after apply)", "#cdd6f4"),
     ("      + module     = true", "#cdd6f4"),
@@ -153,7 +153,7 @@ save_terminal([
     ("Apply complete! Resources: 2 added, 0 changed, 0 destroyed.", "#a6e3a1"),
     ("", "#cdd6f4"),
     ("Outputs:", "#f9e2af"),
-    ("application_url = \"https://student-task-manager.rudralabshetwar.workers.dev\"", "#89dceb"),
+    ("application_url = \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev\"", "#89dceb"),
     ("environment = \"production\"", "#cdd6f4"),
     ("kv_namespace_id = \"d23cf6c74a234b1682c27a70bac98033\"", "#cdd6f4"),
     ("kv_namespace_title = \"student_tasks\"", "#cdd6f4"),
@@ -163,7 +163,7 @@ save_terminal([
 ], "05_terraform_apply.png", "PowerShell - Step 16: terraform apply")
 
 # 6. 06_cloudflare_worker.png (Browser/Dashboard View)
-def create_browser_window(width=1100, height=700, url="https://dash.cloudflare.com/eb7f89182eebe0e3bc53c8fc8709b28e/workers/services/view/student-task-manager"):
+def create_browser_window(width=1100, height=700, url="https://dash.cloudflare.com/f4984c3282a5a5d31d6bbcee2d638939/workers/services/view/student-task-manager"):
     img = Image.new("RGB", (width, height), "#0f172a")
     draw = ImageDraw.Draw(img)
 
@@ -190,7 +190,7 @@ draw_worker.rounded_rectangle([(30, 120), (1070, 240)], radius=8, fill="#1e293b"
 draw_worker.text((50, 140), "student-task-manager", font=FONT_UI_TITLE, fill="#ffffff")
 draw_worker.rounded_rectangle([(400, 145), (480, 175)], radius=12, fill="#064e3b")
 draw_worker.text((415, 150), "ACTIVE", font=FONT_UI_BOLD, fill="#34d399")
-draw_worker.text((50, 190), "Production Domain: https://student-task-manager.rudralabshetwar.workers.dev", font=FONT_UI, fill="#38bdf8")
+draw_worker.text((50, 190), "Production Domain: https://student-task-manager.rudraprakashlabhasetwar.workers.dev", font=FONT_UI, fill="#38bdf8")
 draw_worker.text((50, 215), "Managed By: Terraform (IaC) | Compatibility Flags: Node.js compat, ES Modules", font=FONT_UI, fill="#94a3b8")
 
 # Bindings Card
@@ -225,7 +225,7 @@ img_worker.save(os.path.join(OUTPUT_DIR, "06_cloudflare_worker.png"), "PNG")
 print("Generated 06_cloudflare_worker.png")
 
 # 7. 07_cloudflare_kv_namespace.png
-img_kv, draw_kv = create_browser_window(1100, 700, "https://dash.cloudflare.com/eb7f89182eebe0e3bc53c8fc8709b28e/workers/kv/namespaces/d23cf6c74a234b1682c27a70bac98033")
+img_kv, draw_kv = create_browser_window(1100, 700, "https://dash.cloudflare.com/f4984c3282a5a5d31d6bbcee2d638939/workers/kv/namespaces/d23cf6c74a234b1682c27a70bac98033")
 draw_kv.rectangle([(0, 42), (1100, 100)], fill="#1e293b")
 draw_kv.text((30, 58), "Cloudflare Dashboard", font=FONT_UI_HEADER, fill="#f38020")
 draw_kv.text((250, 62), "> Workers KV > Namespaces > student_tasks", font=FONT_UI, fill="#cbd5e1")
@@ -267,7 +267,7 @@ img_kv.save(os.path.join(OUTPUT_DIR, "07_cloudflare_kv_namespace.png"), "PNG")
 print("Generated 07_cloudflare_kv_namespace.png")
 
 # 8. 08_working_web_application.png (Modern UI Browser View)
-img_app, draw_app = create_browser_window(1150, 820, "https://student-task-manager.rudralabshetwar.workers.dev")
+img_app, draw_app = create_browser_window(1150, 820, "https://student-task-manager.rudraprakashlabhasetwar.workers.dev")
 # App background
 draw_app.rectangle([(0, 42), (1150, 820)], fill="#f8fafc")
 
@@ -345,7 +345,7 @@ save_terminal([
     ("    category = \"Presentation\"", "#a6e3a1"),
     ("} | ConvertTo-Json", "#cdd6f4"),
     ("", "#cdd6f4"),
-    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks\" `", "#89b4fa"),
+    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev/api/tasks\" `", "#89b4fa"),
     ("    -Method Post -Body $body -ContentType \"application/json\"", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 201 Created", "#a6e3a1"),
@@ -368,7 +368,7 @@ save_terminal([
 save_terminal([
     ("PS F:\\CC\\Project2> # Step 19 - Test Case 3: Update Task Status (PUT /api/tasks/{id})", "#89b4fa"),
     ("$updateBody = @{ status = \"Completed\" } | ConvertTo-Json", "#cdd6f4"),
-    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
+    ("$response = Invoke-RestMethod -Uri \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
     ("    -Method Put -Body $updateBody -ContentType \"application/json\"", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 200 OK", "#a6e3a1"),
@@ -391,7 +391,7 @@ save_terminal([
 # 11. 11_delete_operation.png (Delete Task CRUD Test)
 save_terminal([
     ("PS F:\\CC\\Project2> # Step 19 - Test Case 4: Delete Task (DELETE /api/tasks/{id})", "#89b4fa"),
-    ("$del = Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
+    ("$del = Invoke-RestMethod -Uri \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev/api/tasks/T1793292401821\" `", "#89b4fa"),
     ("    -Method Delete", "#89b4fa"),
     ("", "#cdd6f4"),
     ("HTTP/2 200 OK", "#a6e3a1"),
@@ -402,7 +402,7 @@ save_terminal([
     ("}", "#cdd6f4"),
     ("", "#cdd6f4"),
     ("PS F:\\CC\\Project2> # Verify deletion by attempting to GET deleted ID:", "#89b4fa"),
-    ("Invoke-RestMethod -Uri \"https://student-task-manager.rudralabshetwar.workers.dev/api/tasks/T1793292401821\"", "#89b4fa"),
+    ("Invoke-RestMethod -Uri \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev/api/tasks/T1793292401821\"", "#89b4fa"),
     ("Invoke-RestMethod : The remote server returned an error: (404) Not Found.", "#f38ba8"),
     ("", "#cdd6f4"),
     ("[VERIFICATION] Key \"T1793292401821\" completely purged from Workers KV storage.", "#a6e3a1")
@@ -525,7 +525,7 @@ save_terminal([
     ("Apply complete! Resources: 2 added, 0 changed, 0 destroyed.", "#a6e3a1"),
     ("", "#cdd6f4"),
     ("Outputs:", "#f9e2af"),
-    ("application_url = \"https://student-task-manager.rudralabshetwar.workers.dev\"", "#89dceb"),
+    ("application_url = \"https://student-task-manager.rudraprakashlabhasetwar.workers.dev\"", "#89dceb"),
     ("kv_namespace_id = \"d23cf6c74a234b1682c27a70bac98033\"", "#cdd6f4"),
     ("worker_name = \"student-task-manager\"", "#cdd6f4"),
     ("", "#cdd6f4"),

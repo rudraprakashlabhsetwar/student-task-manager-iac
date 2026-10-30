@@ -208,7 +208,7 @@ student-task-manager-iac/
   1. `cloudflare_workers_kv_namespace.student_tasks`: Allocates a global key-value store.
   2. `cloudflare_workers_script.task_manager`: Compiles and uploads the worker script, binding `TASKS_KV` directly to the KV namespace ID.
 - **`variables.tf`**: Eliminates magic values by exposing customizable variables for `account_id`, `worker_name`, `kv_namespace_name`, `environment`, and `workers_subdomain`.
-- **`outputs.tf`**: Exposes the provisioned worker name, KV namespace ID, and live deployment URL (`https://student-task-manager.rudralabshetwar.workers.dev`).
+- **`outputs.tf`**: Exposes the provisioned worker name, KV namespace ID, and live deployment URL (`https://student-task-manager.rudraprakashlabhasetwar.workers.dev`).
 
 ---
 

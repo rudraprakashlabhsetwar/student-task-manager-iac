@@ -7,6 +7,7 @@ variable "cloudflare_api_token" {
 variable "account_id" {
   description = "Cloudflare Account ID"
   type        = string
+  default     = "f4984c3282a5a5d31d6bbcee2d638939"
 }
 
 variable "worker_name" {
@@ -30,5 +31,5 @@ variable "environment" {
 variable "workers_subdomain" {
   description = "Cloudflare workers.dev account subdomain"
   type        = string
-  default     = "rudralabshetwar"
+  default     = "rudraprakashlabhasetwar"
 }
